@@ -33,7 +33,6 @@ local math_iA = {
   ls.parser.parse_snippet({ trig = "rd", name = "to the ... power ^{()}" }, "^{($1)}$0 "),
   ls.parser.parse_snippet({ trig = "cb", name = "Cube ^3" }, "^3 "),
   ls.parser.parse_snippet({ trig = "sr", name = "Square ^2" }, "^2"),
-
   ls.parser.parse_snippet({ trig = "EE", name = "exists" }, "\\exists "),
   ls.parser.parse_snippet({ trig = "AA", name = "forall" }, "\\forall "),
   ls.parser.parse_snippet({ trig = "xnn", name = "xn" }, "x_{n}"),
@@ -45,9 +44,7 @@ local math_iA = {
   ls.parser.parse_snippet({ trig = "xp1", name = "x" }, "x_{n+1}"),
   ls.parser.parse_snippet({ trig = "xmm", name = "x" }, "x_{m}"),
   ls.parser.parse_snippet({ trig = "R0+", name = "R0+" }, "\\mathbb{R}_0^+"),
-
   ls.parser.parse_snippet({ trig = "notin", name = "not in " }, "\\not\\in "),
-
   ls.parser.parse_snippet({ trig = "cc", name = "subset" }, "\\subset "),
 
   with_priority(
@@ -82,12 +79,9 @@ local math_iA = {
   ls.parser.parse_snippet({ trig = "<>", name = "hokje" }, "\\diamond "),
   ls.parser.parse_snippet({ trig = ">>", name = ">>" }, "\\gg"),
   ls.parser.parse_snippet({ trig = "<<", name = "<<" }, "\\ll"),
-
   ls.parser.parse_snippet({ trig = "stt", name = "text subscript" }, "_\\text{$1} $0"),
   ls.parser.parse_snippet({ trig = "tt", name = "text" }, "\\text{$1}$0"),
-
   ls.parser.parse_snippet({ trig = "xx", name = "cross" }, "\\times "),
-
   with_priority(ls.parser.parse_snippet({ trig = "**", name = "cdot" }, "\\cdot "), 100),
 
   ls.parser.parse_snippet(
@@ -122,11 +116,11 @@ local math_iA = {
   ls.parser.parse_snippet({ trig = "==", name = "equals" }, [[&= $1 \\\\]]),
   ls.parser.parse_snippet({ trig = "!=", name = "not equals" }, "\\neq "),
   ls.parser.parse_snippet({ trig = "compl", name = "complement" }, "^{c}"),
-  ls.parser.parse_snippet({ trig = "__", name = "subscript" }, "_{$1}$0"),
+  ls.parser.parse_snippet({ trig = "_", name = "subscript" }, "_{$1}$0"),
+  ls.parser.parse_snippet({ trig = "^", name = "superscript" }, "^{$1}$0"),
   ls.parser.parse_snippet({ trig = "=>", name = "implies" }, "\\implies"),
   ls.parser.parse_snippet({ trig = "=<", name = "implied by" }, "\\impliedby"),
   ls.parser.parse_snippet({ trig = "<<", name = "<<" }, "\\ll"),
-
   ls.parser.parse_snippet({ trig = "<=", name = "leq" }, "\\le "),
   ls.parser.parse_snippet({ trig = ">=", name = "geq" }, "\\ge "),
   ls.parser.parse_snippet({ trig = "invs", name = "inverse" }, "^{-1}"),
