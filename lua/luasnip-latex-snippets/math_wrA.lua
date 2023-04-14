@@ -16,7 +16,7 @@ local frac_no_parens = {
 
 local frac = s({
   priority = 1000,
-  trig = ".*%)/",
+  trig = ".*%)//",
   wordTrig = true,
   name = "() frac",
 }, {
@@ -40,7 +40,7 @@ local frac = s({
     end
 
     local rv =
-      string.format("%s\\frac{%s}", stripped:sub(1, i - 1), stripped:sub(i + 1, #stripped - 1))
+        string.format("%s\\frac{%s}", stripped:sub(1, i - 1), stripped:sub(i + 1, #stripped - 1))
 
     return rv
   end, {}),
