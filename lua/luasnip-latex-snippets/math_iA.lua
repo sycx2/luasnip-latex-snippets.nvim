@@ -74,7 +74,10 @@ local math_iA = {
     { trig = "letw", name = "let omega" },
     "Let $\\Omega \\subset \\C$ be open."
   ),
-  ls.parser.parse_snippet({ trig = "nnn", name = "bigcap" }, "\\bigcap_{${1:i \\in ${2: I}}} $0"),
+  ls.parser.parse_snippet(
+    { trig = "nnn", name = "bigcap" },
+    "\\bigcap\\limits_{${1:i \\in ${2: I}}} $0"
+  ),
   ls.parser.parse_snippet({ trig = "norm", name = "norm" }, "\\|$1\\|$0"),
   ls.parser.parse_snippet({ trig = "<>", name = "hokje" }, "\\diamond "),
   ls.parser.parse_snippet({ trig = ">>", name = ">>" }, "\\gg"),
@@ -101,7 +104,10 @@ local math_iA = {
     { trig = "bmat", name = "bmat" },
     "\\begin{bmatrix} $1 \\end{bmatrix} $0"
   ),
-  ls.parser.parse_snippet({ trig = "uuu", name = "bigcup" }, "\\bigcup_{${1:i \\in ${2: I}}} $0"),
+  ls.parser.parse_snippet(
+    { trig = "uuu", name = "bigcup" },
+    "\\bigcup\\limits_{${1:i \\in ${2: I}}} $0"
+  ),
   ls.parser.parse_snippet({ trig = "DD", name = "D" }, "\\mathbb{D}"),
   ls.parser.parse_snippet({ trig = "HH", name = "H" }, "\\mathbb{H}"),
   ls.parser.parse_snippet({ trig = "lll", name = "l" }, "\\ell"),
