@@ -40,7 +40,7 @@ local frac = s({
     end
 
     local rv =
-        string.format("%s\\frac{%s}", stripped:sub(1, i - 1), stripped:sub(i + 1, #stripped - 1))
+      string.format("%s\\frac{%s}", stripped:sub(1, i - 1), stripped:sub(i + 1, #stripped - 1))
 
     return rv
   end, {}),
@@ -94,7 +94,7 @@ local math_wrA = {
   }, vim.deepcopy(frac_no_parens)),
 
   s({
-    trig = "(\\?%w+)/",
+    trig = "(\\?%w+)//",
     name = "Fraction no ()",
   }, vim.deepcopy(frac_no_parens)),
 }
