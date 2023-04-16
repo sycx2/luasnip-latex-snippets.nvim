@@ -46,6 +46,7 @@ local math_iA = {
   ls.parser.parse_snippet({ trig = "R0+", name = "R0+" }, "\\mathbb{R}_0^+"),
   ls.parser.parse_snippet({ trig = "notin", name = "not in " }, "\\not\\in "),
   ls.parser.parse_snippet({ trig = "cc", name = "subset" }, "\\subset "),
+  ls.parser.parse_snippet({ trig = "subseq", name = "subset equal" }, "\\subseteq"),
 
   with_priority(
     ls.parser.parse_snippet({ trig = "<->", name = "leftrightarrow" }, "\\leftrightarrow"),
